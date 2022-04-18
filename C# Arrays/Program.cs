@@ -3,19 +3,42 @@
     class Program 
     {
         static void Main(string[] args) 
-        {
+        {   
 
-                string[] drinks = new string[4];
+                List<string> shoppingList = new List<string>();
 
-                Console.WriteLine("What is your four favorite drinks?");
+                shoppingList.Add("Dreams");
+                shoppingList.Add("Miracles");
+                shoppingList.Add("Rainbows");
+                shoppingList.Add("Pony");
 
-                drinks[0] = Console.ReadLine();
-                drinks[1] = Console.ReadLine();
-                drinks[2] = Console.ReadLine();
-                drinks[3] = Console.ReadLine();
-                
+                for (int i = 0; i < shoppingList.Count; i++) {
+                    int raise = i + 1;
+                    Console.WriteLine(shoppingList[i]);
+                }
 
-                Array.Sort(drinks);
+                shoppingList.Remove("Dreams");
+                shoppingList.RemoveAt(1);
+                Console.WriteLine("-------------");
+                for (int i = 0; i < shoppingList.Count; i++) {
+                    int raise = i + 1;
+                    Console.WriteLine(shoppingList[i]);
+                }
+
+                // string[] drinks = new string[4]
+                // Console.WriteLine("What is your four favorite drinks?")
+                // for (int i = 0; i < drinks.Length; i++) {
+                //     drinks[i] = Console.ReadLine();
+                // }
+                // Console.WriteLine("Here they are alphabetically");
+                // Array.Sort(drinks);
+                // for (int i = 0; i < drinks.Length; i++) {
+                //     Console.WriteLine(drinks[i]);
+                // }
+
+
+
+
 
             Console.ReadKey();
 
