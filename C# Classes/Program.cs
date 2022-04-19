@@ -14,7 +14,18 @@
             {
                 Console.WriteLine(name + " casts " + favoriteSpell);
                  spellSlots--;
+                 experience += .03f;
             }
+            else 
+            {
+                Console.WriteLine(name + " is out of spell slots.");
+            }
+        }
+
+        public void Meditate()
+        {
+            Console.WriteLine(name + " meditates to regain spell slots.");
+            spellSlots = 2;
         }
 
     }
@@ -32,6 +43,10 @@
             Console.WriteLine("Spell slots: " + wizard1.spellSlots);
             
             wizard1.CastSpell();
+            wizard1.CastSpell();
+            wizard1.CastSpell();
+
+            Console.WriteLine("Experience: " + wizard1.experience);
 
             Console.WriteLine("Spell slots: " + wizard1.spellSlots);
 
