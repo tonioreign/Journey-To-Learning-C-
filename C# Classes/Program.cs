@@ -3,9 +3,21 @@
         class Wizard
     {
         public string name;
-        public string favoriteSpell;
+        public string favoriteSpell; //"public" can be accessed outside of the class
         public int spellSlots;
-        public float experience; 
+        private float experience; //"private" can only be accessed through the class
+        public static int Count; //static can access general elements
+
+        public Wizard(string _name, string _favoriteSpell)
+        {
+            name = _name;
+            favoriteSpell = _favoriteSpell;
+            spellSlots = 2;
+            experience = 0f;
+
+            Count++;
+        }
+
 
         public void CastSpell()
         {
@@ -34,23 +46,8 @@
     {
         static void Main(string[] args) 
         {
-            Wizard wizard1 = new Wizard();
-            wizard1.name = "Tonio Reign";
-            wizard1.favoriteSpell = "Fire Ball";
-            wizard1.spellSlots = 2;
-            wizard1.experience = 0f; //always use "f" on numbers using float
 
-            Console.WriteLine("Spell slots: " + wizard1.spellSlots);
             
-            wizard1.CastSpell();
-            wizard1.CastSpell();
-            wizard1.CastSpell();
-
-            Console.WriteLine("Experience: " + wizard1.experience);
-
-            Console.WriteLine("Spell slots: " + wizard1.spellSlots);
-
-
 
 
             Console.ReadKey();
